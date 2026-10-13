@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: expense-tracker
+  datasource:
+    url: jdbc:h2:file:./data/expensedb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  flyway:
+    enabled: true
+    # Optional: H2 in PostgreSQL mode works great with standard SQL,
+    # but if Flyway complains about syntax, ensure your V1__init_schema.sql uses standard types.
