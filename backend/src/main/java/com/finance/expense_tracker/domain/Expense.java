@@ -25,7 +25,6 @@ public class Expense {
     @Column(name = "user_id", nullable = false)
     private Long userId;
 
-    @NotBlank(message = "Title is required")
     @Size(max = 100, message = "Title must not exceed 100 characters")
     @Column(nullable = false, length = 100)
     private String title;

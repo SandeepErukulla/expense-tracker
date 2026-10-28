@@ -29,9 +29,9 @@ public class User {
     @Column(nullable = false, unique = true, length = 100)
     private String email;
 
-    @NotBlank(message = "Password hash is required")
-    @Column(name = "password_hash", nullable = false)
-    private String passwordHash;
+    @NotBlank(message = "Password is required")
+    @Column(name = "password", nullable = false)
+    private String password;
 
     @Column(name = "created_at", insertable = false, updatable = false)
     private OffsetDateTime createdAt;
